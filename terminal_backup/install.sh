@@ -66,6 +66,10 @@ print_status "Fastfetch installed"
 sudo dnf install -y kitty
 print_status "Kitty terminal installed"
 
+# Podman & Podman Compose
+sudo dnf install -y podman podman-compose
+print_status "Podman and Podman Compose installed"
+
 # 4. Install Zsh Plugins
 echo -e "${GREEN}>>> Installing Zsh plugins...${NC}"
 sudo dnf install -y zsh-autosuggestions zsh-syntax-highlighting
