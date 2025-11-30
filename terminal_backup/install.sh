@@ -135,6 +135,13 @@ if [ -d "$SCRIPT_DIR/.config/fastfetch" ]; then
     print_status "fastfetch config copied"
 fi
 
+# fastfetch custom logo
+if [ -f "$SCRIPT_DIR/images/jedi.png" ]; then
+    mkdir -p ~/.config/fastfetch/assets
+    cp "$SCRIPT_DIR/images/jedi.png" ~/.config/fastfetch/assets/
+    print_status "fastfetch custom logo (jedi.png) copied"
+fi
+
 # fish config
 if [ -d "$SCRIPT_DIR/.config/fish" ]; then
     mkdir -p ~/.config/fish
