@@ -62,6 +62,10 @@ fi
 sudo dnf install -y fastfetch
 print_status "Fastfetch installed"
 
+# Kitty
+sudo dnf install -y kitty
+print_status "Kitty terminal installed"
+
 # 4. Install Zsh Plugins
 echo -e "${GREEN}>>> Installing Zsh plugins...${NC}"
 sudo dnf install -y zsh-autosuggestions zsh-syntax-highlighting
@@ -136,6 +140,13 @@ if [ -d "$SCRIPT_DIR/.config/fish" ]; then
     mkdir -p ~/.config/fish
     cp -r "$SCRIPT_DIR/.config/fish/"* ~/.config/fish/
     print_status "fish config copied"
+fi
+
+# kitty config
+if [ -d "$SCRIPT_DIR/.config/kitty" ]; then
+    mkdir -p ~/.config/kitty
+    cp -r "$SCRIPT_DIR/.config/kitty/"* ~/.config/kitty/
+    print_status "kitty config copied"
 fi
 
 # 6. Restore Fonts
